@@ -5,7 +5,13 @@
 
 // Put your answer below -------------------------
 
-
+function myFunction(str, x){
+  let strArray = [];
+  for (let i = 0; i <= x; i++){
+      strArray = strArray.concat(str);
+  }
+  return strArray;
+}
 
 
 
@@ -24,7 +30,10 @@
 // Put your answer below -------------------------
 
 
-
+function myArray(str){
+   newStr = str.slice('').reverse();
+   return newStr;
+}
 
 
 
@@ -40,7 +49,10 @@
 
 // Put your answer below -------------------------
 
-
+function falsyOut(arr){
+let newArray = arr.filter(Boolean);
+return newArray;
+}
 
 
 
@@ -59,7 +71,10 @@
 
 // Put your answer below -------------------------
 
-
+function nested(arr){
+let objectArr = arr.map(item => Object.fromEntries(item));
+return objectArr;
+}
 
 
 
