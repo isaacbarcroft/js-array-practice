@@ -93,7 +93,9 @@ return objectArr;
 // Put your answer below -------------------------
 
 
-
+function unique(numbers){
+    const uniqueNumbers = [ ... new Set(numbers)];
+}
 
 
 
