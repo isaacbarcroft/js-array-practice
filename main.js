@@ -116,7 +116,47 @@ function unique(numbers){
 // Put your answer below -------------------------
 
 
+function similar(arr1, arr2){
+    let newArr1 = arr1.slice().sort();
+    let newArr2 = arr2.slice().sort();
+if (newArr1.length === newArr2.length && newArr1.every(value, index) === newArr2.every(value, index)) {
+    return true;
+}else {
+    return false;
+}
+}
 
+function similar(arr1, arr2) {
+    let newArr1 = arr1.slice().sort();
+    let newArr2 = arr2.slice().sort();
+    
+    //compare newArr1 to newArr2
+    //if you can't find the number in the other array, return false
+    for (let i = 0; i < newArr1.length; i++) {
+      newArr2.find(num => {
+        if (num !== newArr1[i]) {
+          return false
+        }
+      })
+    }
+  
+      //compare newArr2 to newArr1
+    //if you can't find the number in the other array, return false
+    for (let i = 0; i < newArr2.length; i++) {
+      newArr1.find(num => {
+        if (num !== newArr2[i]) {
+          return false
+        }
+      })
+    }
+  
+      //Check their respective lengths to ensure no duplicates
+    if (newArr1.length == newArr2.length) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
 
 
@@ -144,7 +184,6 @@ function unique(numbers){
 // ---------------------
 
 // Put your answer below -------------------------
-
 
 
 
