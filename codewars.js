@@ -31,27 +31,17 @@ const arr = N => {
 
 
 function flyBy(lamps, drone){
-    let droneArray = drone.split(''); // array
+  
     let lampsArray = lamps.split(''); // array
-     let droneIndex;
-     // find position of T (index)
-     // change 'x' to 'o' up until that index
-     // change array back to string 
-     //return lamps string 
+    
      
    
      for (let i = 0; i < droneArray.length; i++){
-     if (droneArray[i] === 'T'){
-       droneIndex = i;
+     if (lampsArray[i] === 'x'){
+      lampsArray.splice(i,1,"o");
      }
    }
-   for (let i = 0; i <= droneIndex; i++){
-     console.log(droneIndex);
-     lampsArray[i] = 'o';
-   }
-     let lampsString = lampsArray.join('');
-     
-     return lampsString;
+   return lampsArray.join('');
      }
 
 // # 4
